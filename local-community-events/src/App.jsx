@@ -1,9 +1,14 @@
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import EventDetails from "./pages/EventDetails";
+
 function App() {
     return (
-        <div>
-            <h1>Local Community Events</h1>
-        </div>
-    )
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/event/:id" element={<EventDetails />} />
+        </Routes>
+    );
 }
 
-export default App
+export default App;
