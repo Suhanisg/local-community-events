@@ -28,3 +28,24 @@ A modern React-based web application that allows users to explore, search, filte
 ---
 
 ## 📂 Project Structure
+
+## ⚙️ Installation & Setup
+
+1. Clone the repository:
+git clone https://github.com/suhanisg/local-community-events.git
+
+
+2. Navigate to the project folder:
+cd local-community-events
+
+
+3. Install dependencies:
+npm install
+
+
+4. Start the development server:
+npm run dev
+
+
+5. Open in browser:
+http://localhost:5173
