@@ -1,13 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import EventDetails from "./pages/EventDetails";
+import Navbar from "./components/Navbar";
 
 function App() {
     return (
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/event/:id" element={<EventDetails />} />
-        </Routes>
+        <>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/event/:id" element={<EventDetails />} />
+            </Routes>
+        </>
     );
 }
 

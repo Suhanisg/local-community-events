@@ -9,12 +9,13 @@ function EventDetails() {
     const event = events.find((e) => e.id === Number(id));
 
     if (!event) {
-        return <h2>Event not found</h2>;
+        return <h2 style={{ textAlign: "center" }}>Event not found</h2>;
     }
 
     return (
-        <div style={{ padding: "20px" }}>
+        <div className="details-container">
             <h2>{event.title}</h2>
+
             <p><strong>Type:</strong> {event.type}</p>
             <p><strong>Date:</strong> {event.date}</p>
             <p><strong>Location:</strong> {event.location}</p>
@@ -24,17 +25,13 @@ function EventDetails() {
             {!joined ? (
                 <button
                     onClick={() => setJoined(true)}
-                    style={{
-                        marginTop: "15px",
-                        padding: "8px 15px",
-                        cursor: "pointer"
-                    }}
+                    className="join-btn"
                 >
                     Join Event
                 </button>
             ) : (
-                <p style={{ marginTop: "15px", color: "green" }}>
-                    ✅ You have successfully joined this event!
+                <p className="success-message">
+                    🎉 You have successfully joined this event!
                 </p>
             )}
         </div>
