@@ -6,6 +6,7 @@ function Home() {
     const [selectedType, setSelectedType] = useState("");
     const [selectedLocation, setSelectedLocation] = useState("");
     const [searchTerm, setSearchTerm] = useState("");
+    const [selectedDate, setSelectedDate] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
 
     const eventsPerPage = 6;
@@ -14,11 +15,12 @@ function Home() {
     const types = [...new Set(events.map((event) => event.type))];
     const locations = [...new Set(events.map((event) => event.location))];
 
-    // Filtering logic (type + location + search)
+    // Filtering logic
     const filteredEvents = events.filter((event) => {
         return (
             (selectedType === "" || event.type === selectedType) &&
             (selectedLocation === "" || event.location === selectedLocation) &&
+            (selectedDate === "" || event.date === selectedDate) &&
             event.title.toLowerCase().includes(searchTerm.toLowerCase())
         );
     });
@@ -31,10 +33,10 @@ function Home() {
         startIndex + eventsPerPage
     );
 
-    // Reset page when filters/search change
+    // Reset page when filters/search/date change
     useEffect(() => {
         setCurrentPage(1);
-    }, [selectedType, selectedLocation, searchTerm]);
+    }, [selectedType, selectedLocation, searchTerm, selectedDate]);
 
     return (
         <div className="main-container">
@@ -82,6 +84,19 @@ function Home() {
                         </option>
                     ))}
                 </select>
+
+                {/* Date Filter */}
+                <input
+                    type="date"
+                    value={selectedDate}
+                    onChange={(e) => setSelectedDate(e.target.value)}
+                    style={{
+                        marginLeft: "10px",
+                        padding: "8px",
+                        borderRadius: "5px",
+                        border: "1px solid #ccc"
+                    }}
+                />
             </div>
 
             {/* Event Grid */}
