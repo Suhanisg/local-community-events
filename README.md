@@ -68,7 +68,7 @@ http://localhost:5173
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home Page](./home.png)
+![Home Page](./Home.png)
 
 ### ➕ Create Event Page
 ![Create Event](./create-event.png)
