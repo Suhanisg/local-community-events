@@ -30,19 +30,21 @@ A modern React-based web application that allows users to explore, search, filte
 
 ## 📂 Project Structure
 
+```
 src/
 ├── components/
-│ ├── Navbar.jsx
-│ ├── EventCard.jsx
+│   ├── Navbar.jsx
+│   ├── EventCard.jsx
 ├── pages/
-│ ├── Home.jsx
-│ ├── EventDetails.jsx
-│ ├── CreateEvent.jsx
+│   ├── Home.jsx
+│   ├── EventDetails.jsx
+│   ├── CreateEvent.jsx
 ├── data/
-│ ├── events.js
+│   ├── events.js
 ├── App.jsx
 ├── main.jsx
 ├── index.css
+```
 
 ## ⚙️ Installation & Setup
 
