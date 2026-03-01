@@ -65,6 +65,19 @@ http://localhost:5173
 
 ---
 
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home Page](./home.png)
+
+### ➕ Create Event Page
+![Create Event](./create-event.png)
+
+### 📄 Event Details Page
+![Event Details](./event-details.png)
+
+---
+
 ## 📌 About
 
 This project was built to demonstrate React fundamentals including routing, state management, filtering, pagination, and form handling.
